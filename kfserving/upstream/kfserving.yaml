@@ -4109,6 +4109,18 @@ rules:
 - apiGroups:
   - networking.istio.io
   resources:
+  - virtualservices/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - networking.istio.io
+  resources:
   - virtualservices/status
   verbs:
   - get
@@ -4118,6 +4130,18 @@ rules:
   - serving.knative.dev
   resources:
   - services
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - serving.knative.dev
+  resources:
+  - services/finalizers
   verbs:
   - create
   - delete
@@ -4349,7 +4373,7 @@ metadata:
 spec:
   ports:
   - port: 443
-    targetPort: 443
+    targetPort: 9443
   selector:
     control-plane: kfserving-controller-manager
 ---
@@ -4395,7 +4419,7 @@ spec:
               fieldPath: metadata.namespace
         - name: SECRET_NAME
           value: kfserving-webhook-server-cert
-        image: gcr.io/kfserving/kfserving-controller:v0.4.0
+        image: pvaneckw/kfserving-controller:latest
         imagePullPolicy: Always
         name: manager
         ports:

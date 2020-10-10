@@ -19,6 +19,6 @@ images:
 - name: gcr.io/kubebuilder/kube-rbac-proxy
   newName: gcr.io/kubebuilder/kube-rbac-proxy
   newTag: v0.4.0
-- name: gcr.io/kfserving/kfserving-controller
-  newName: gcr.io/kfserving/kfserving-controller
-  newTag: v0.4.0
+- name: pvaneckw/kfserving-controller
+  newName: pvaneckw/kfserving-controller
+  newTag: latest

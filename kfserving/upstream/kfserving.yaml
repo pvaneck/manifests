@@ -4162,6 +4162,7 @@ rules:
   - serving.kubeflow.org
   resources:
   - inferenceservices
+  - inferenceservices/finalizers
   verbs:
   - create
   - delete

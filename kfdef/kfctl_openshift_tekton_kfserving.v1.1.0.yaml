@@ -1,9 +1,6 @@
 apiVersion: kfdef.apps.kubeflow.org/v1
 kind: KfDef
 metadata:
-  clusterName: sourest
-  creationTimestamp: null
-  name: kfdef
   namespace: kubeflow
 spec:
   applications:

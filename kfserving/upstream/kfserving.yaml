@@ -4262,7 +4262,7 @@ data:
     {
         "alibi": {
             "image" : "gcr.io/kfserving/alibi-explainer",
-            "defaultImageVersion": "v0.4.0"
+            "defaultImageVersion": "v0.4.1"
         }
     }
   ingress: |-
@@ -4272,7 +4272,7 @@ data:
     }
   logger: |-
     {
-        "image" : "gcr.io/kfserving/logger:v0.4.0",
+        "image" : "gcr.io/kfserving/logger:v0.4.1",
         "memoryRequest": "100Mi",
         "memoryLimit": "1Gi",
         "cpuRequest": "100m",
@@ -4292,16 +4292,16 @@ data:
         },
         "sklearn": {
             "image": "gcr.io/kfserving/sklearnserver",
-            "defaultImageVersion": "v0.4.0"
+            "defaultImageVersion": "v0.4.1"
         },
         "xgboost": {
             "image": "gcr.io/kfserving/xgbserver",
-            "defaultImageVersion": "v0.4.0"
+            "defaultImageVersion": "v0.4.1"
         },
         "pytorch": {
             "image": "gcr.io/kfserving/pytorchserver",
-            "defaultImageVersion": "v0.4.0",
-            "defaultGpuImageVersion": "v0.4.0-gpu"
+            "defaultImageVersion": "v0.4.1",
+            "defaultGpuImageVersion": "v0.4.1-gpu"
         },
         "triton": {
             "image": "nvcr.io/nvidia/tritonserver",
@@ -4310,7 +4310,7 @@ data:
     }
   storageInitializer: |-
     {
-        "image" : "gcr.io/kfserving/storage-initializer:v0.4.0",
+        "image" : "gcr.io/kfserving/storage-initializer:v0.4.1",
         "memoryRequest": "100Mi",
         "memoryLimit": "1Gi",
         "cpuRequest": "100m",
@@ -4420,7 +4420,7 @@ spec:
               fieldPath: metadata.namespace
         - name: SECRET_NAME
           value: kfserving-webhook-server-cert
-        image: pvaneckw/kfserving-controller:latest
+        image: gcr.io/kfserving/kfserving-controller:v0.4.1
         imagePullPolicy: Always
         name: manager
         ports:

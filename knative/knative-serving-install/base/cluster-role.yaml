@@ -31,7 +31,7 @@ rules:
   - serving.knative.dev
   - networking.internal.knative.dev
   - autoscaling.internal.knative.dev
-  - 'caching.internal.knative.dev]'
+  - caching.internal.knative.dev
   resources:
   - '*'
   verbs:

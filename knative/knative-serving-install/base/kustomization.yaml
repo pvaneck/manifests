@@ -9,6 +9,7 @@ resources:
 - service-role-binding.yaml
 - config-map.yaml
 - deployment.yaml
+- secret.yaml
 - service-account.yaml
 - service.yaml
 - image.yaml

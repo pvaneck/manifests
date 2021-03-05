@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: knative-serving
+resources:
+- serving-core.yaml
+- net-istio.yaml
+commonLabels:
+  kustomize.component: knative
+  app.kubernetes.io/component: knative-serving-install
+  app.kubernetes.io/name: knative-serving-install
